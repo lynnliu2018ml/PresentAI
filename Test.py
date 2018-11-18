@@ -1,6 +1,6 @@
 import re
 
-fp = open("pg21580.txt","r")
+fp = open("txt\pg21580.txt","r")
 lines = fp.readlines()
 
 for line in lines[0:10]:
