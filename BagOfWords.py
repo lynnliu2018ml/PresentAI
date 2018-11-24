@@ -59,11 +59,11 @@ print(GetBooks().head(10))
 
 
 # normalize_corpus = np.vectorize(normalize_document)
-#  
+#   
 # norm_corpus = normalize_corpus(corpus)
 # norm_corpus
-# 
-# 
+#  
+ 
 # #Bag of Words Model
 # cv = CountVectorizer(min_df=0., max_df=1.)
 # cv_matrix = cv.fit_transform(norm_corpus)
