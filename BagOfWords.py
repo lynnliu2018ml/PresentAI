@@ -23,6 +23,7 @@ def normalize_document(doc):
 
 
 def RemoveUnicodeChars(s):
+    #remove the ZERO WIDTH NO-BREAK SPACE unicode character
     s = s.replace(u'\ufeff', '')
     return s
 
