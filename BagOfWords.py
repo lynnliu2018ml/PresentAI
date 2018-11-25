@@ -9,8 +9,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 # Wordnet is an large, freely and publicly available lexical database for the English language 
 # aiming to establish structured semantic relationships between words. 
 # It offers lemmatization capabilities as well and is one of the earliest and most commonly used lemmatizers.
-nltk.download('wordnet')
-from nltk.stem import WordNetLemmatizer
+
 
 
 wpt = nltk.WordPunctTokenizer()
@@ -30,6 +29,8 @@ def normalize_document(doc):
     return doc
 
 def Lemmitize(s):
+    #nltk.download('wordnet') #Download this only for the first time
+    from nltk.stem import WordNetLemmatizer
     # Init the Wordnet Lemmatizer
     lemmatizer = WordNetLemmatizer()
     lemmatized_output = " ".join([lemmatizer.lemmatize(w) for w in s.split(" ")])
@@ -62,7 +63,6 @@ def GetBooks():
             long_string = RemoveUnicodeChars(long_string)
             long_string = RemoveNumbers(long_string)
             long_string = RemoveSpecialCharacters(long_string)
-#             print(long_string)
             long_string = Lemmitize(long_string) 
             long_string = " ".join(list(set(long_string.split(" ")))) #retain only the unique words
             book_name = file.split(".")[0] #extract the filename without the extension
@@ -88,3 +88,7 @@ vocab = cv.get_feature_names()
 print(pd.DataFrame(cv_matrix, columns=vocab))
 print(len(vocab))
 #print(vocab)
+
+with open("vocabulary.txt", "w") as f:
+    f.write(re.sub(r',',',\n', str(vocab)))
+    
