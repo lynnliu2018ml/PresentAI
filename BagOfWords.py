@@ -6,20 +6,13 @@ import os
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-# Wordnet is an large, freely and publicly available lexical database for the English language 
-# aiming to establish structured semantic relationships between words. 
-# It offers lemmatization capabilities as well and is one of the earliest and most commonly used lemmatizers.
-
-
-
-wpt = nltk.WordPunctTokenizer()
-stop_words = nltk.corpus.stopwords.words('english')
-
 def normalize_document(doc):
     # lower case and remove special characters\whitespaces
     doc = re.sub(r'[^a-zA-Z0-9\s]', '', doc, re.I)
     doc = doc.lower()
     doc = doc.strip()
+    wpt = nltk.WordPunctTokenizer()
+    stop_words = nltk.corpus.stopwords.words('english')
     # tokenize document
     tokens = wpt.tokenize(doc)
     # filter stopwords out of document
@@ -29,6 +22,9 @@ def normalize_document(doc):
     return doc
 
 def Lemmitize(s):
+    # Wordnet is an large, freely and publicly available lexical database for the English language 
+    # aiming to establish structured semantic relationships between words. 
+    # It offers lemmatization capabilities as well and is one of the earliest and most commonly used lemmatizers.
     #nltk.download('wordnet') #Download this only for the first time
     from nltk.stem import WordNetLemmatizer
     # Init the Wordnet Lemmatizer
@@ -87,8 +83,9 @@ cv_matrix
 vocab = cv.get_feature_names()
 print(pd.DataFrame(cv_matrix, columns=vocab))
 print(len(vocab))
-#print(vocab)
 
+
+# Write the vocabulary into a text file for inspection
 with open("vocabulary.txt", "w") as f:
     f.write(re.sub(r',',',\n', str(vocab)))
     
