@@ -3,6 +3,7 @@ import numpy as np
 import re
 import nltk
 import os
+import spacy
 from sklearn.feature_extraction.text import CountVectorizer
 
 
@@ -31,6 +32,18 @@ def Lemmitize(s):
     lemmatizer = WordNetLemmatizer()
     lemmatized_output = " ".join([lemmatizer.lemmatize(w) for w in s.split(" ")])
     return lemmatized_output
+
+def Lemmitize_spacy(s):
+    # Initialize spacy 'en' model, keeping only tagger component needed for lemmatization
+    nlp = spacy.load('en', disable=['parser', 'ner'])
+
+    # Parse the sentence using the loaded 'en' model object `nlp`
+    doc = nlp(s)
+
+    # Extract the lemma for each token and join
+    spacy_output = " ".join([token.lemma_ for token in doc])
+
+    return spacy_output
     
 def RemoveNumbers(s):
     s = re.sub(r'\d+',' ', s)
@@ -59,7 +72,8 @@ def GetBooks():
             long_string = RemoveUnicodeChars(long_string)
             long_string = RemoveNumbers(long_string)
             long_string = RemoveSpecialCharacters(long_string)
-            long_string = Lemmitize(long_string) 
+            long_string = Lemmitize(long_string)
+            long_string = Lemmitize_spacy(long_string)
             long_string = " ".join(list(set(long_string.split(" ")))) #retain only the unique words
             book_name = file.split(".")[0] #extract the filename without the extension
             labels.append(book_name)
