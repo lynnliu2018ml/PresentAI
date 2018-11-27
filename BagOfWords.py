@@ -2,9 +2,21 @@ import pandas as pd
 import numpy as np
 import re
 import nltk
+#Need to download once to run steming
+nltk.download('punkt')
 import os
 import spacy
 from sklearn.feature_extraction.text import CountVectorizer
+
+def stem(s):
+    from nltk.stem.porter import PorterStemmer
+    porter_stemmer = PorterStemmer()
+
+    word_data = (s)
+    # First Word tokenization
+    nltk_tokens = nltk.word_tokenize(word_data)
+    stem_output = " ".join([porter_stemmer.stem(w) for w in nltk_tokens])
+    return stem_output
 
 
 def normalize_document(doc):
@@ -21,6 +33,8 @@ def normalize_document(doc):
     # re-create document from filtered tokens
     doc = ' '.join(filtered_tokens)
     return doc
+
+
 
 def Lemmitize(s):
     # Wordnet is an large, freely and publicly available lexical database for the English language 
@@ -44,7 +58,9 @@ def Lemmitize_spacy(s):
     spacy_output = " ".join([token.lemma_ for token in doc])
 
     return spacy_output
-    
+
+
+
 def RemoveNumbers(s):
     s = re.sub(r'\d+',' ', s)
     return s
@@ -72,8 +88,10 @@ def GetBooks():
             long_string = RemoveUnicodeChars(long_string)
             long_string = RemoveNumbers(long_string)
             long_string = RemoveSpecialCharacters(long_string)
+
             long_string = Lemmitize(long_string)
             long_string = Lemmitize_spacy(long_string)
+            #long_string = stem(long_string)
             long_string = " ".join(list(set(long_string.split(" ")))) #retain only the unique words
             book_name = file.split(".")[0] #extract the filename without the extension
             labels.append(book_name)
