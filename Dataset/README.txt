@@ -2,9 +2,9 @@ Data Source: http://archive.ics.uci.edu/ml/datasets/Health+News+in+Twitter# (Hea
 
 The "HealthNewsTweets.csv" file was processed by Excel. It extracted tweets from all 16 txt files together. 
 
-It also used the “Replace” function in Excel to removed tweets content that has “http*”. 
-Assumption: There’s no tweets content after “http” in a tweet. 
+It also used the â€œReplaceâ€ function in Excel to removed tweets content that has â€œhttp*â€. 
+Assumption: Thereâ€™s no tweet content after â€œhttpâ€ in a tweet. 
 
-Clarification: There were some tweets only has “http*” content, so after the “Replace” function, those lines of tweets became blank. The 119 blank lines was removed.
+Clarification: There were some tweets only has â€œhttp*â€ content, so after the â€œReplaceâ€ function, those lines of tweets became blank. The 119 blank lines was removed.
 
 Number of Instances: 63207
