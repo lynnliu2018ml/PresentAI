@@ -1,3 +1,6 @@
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 from nltk import word_tokenize, pos_tag, pos_tag_sents
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -9,12 +12,14 @@ from itertools import chain
 
 import pandas as pd
 
+
 from nltk import word_tokenize, pos_tag
 
-path2='C:\\Users\\tblakeley\\Documents\\GitHub\\PresentAI\\Dataset\\HealthNewsTweets_cleaned.csv'
+path2='Dataset\\HealthNewsTweets_cleaned.csv'
 
 df=pd.read_csv(path2)
 df.columns = ['sent']
+print(df.head(5))
 
 #remove numbers
 #trans_dict = {"1": "", "2": "", "3": "", "4": "", "5": "", "6": "", "7": "", "8": "", "9": "", "0": ""}
