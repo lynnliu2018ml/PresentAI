@@ -46,7 +46,8 @@ print(len(df[df["target"]==4]))
 
 # Remove the anchor tags
 def removeTags(s):
-    s = re.sub("@[a-zA-Z0-9_]+"," ", s)
+    s = re.sub("@[a-zA-Z0-9_]+"," ", s) #remove the @<the word>
+    s = re.sub("#[a-zA-Z0-9_]+"," ", s) #remove the #<the word>
     return s
 
 df.columns = ["target","ids","date","flag","user","text"]
