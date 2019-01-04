@@ -1,5 +1,11 @@
 import re
 
+
+def FixRogueRows(line):
+	cols = line.split("|")
+	return cols[0] + "|" + cols[1] + "|" + cols[2] + cols[3]
+	
+
 input_files = ["bbchealth.txt", "cbchealth.txt", "cnnhealth.txt", "everydayhealth.txt", "foxnewshealth.txt", "gdnhealthcare.txt", "goodhealth.txt", "KaiserHealthNews.txt", "latimeshealth.txt", "msnhealthnews.txt", "NBChealth.txt", "nprhealth.txt", "nytimeshealth.txt", "reuters_health.txt", "usnewshealth.txt", "wsjhealth.txt"]
 combined = "combined.csv"
 error_lines = "error.txt"
@@ -17,6 +23,8 @@ for file in input_files:
 			#line = re.sub("https:[a-zA-Z/\.0-9?=-]+", " ", line)
 			if len(line.split("|"))==3: #if the number of columns is equal to 3, retain the row, else write to the error file
 				fout.write(line)
+			elif len(line.split("|"))==4:
+				fout.write(FixRogueRows(line))
 			else:
 				ferr.write(line)
 				
