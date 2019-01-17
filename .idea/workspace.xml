@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce4a43e-2fb9-479f-9980-7a71f7ecdb66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/POS_TAG_Tweet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/.ipynb_checkpoints/Feature_Engineering_Modelling-checkpoint-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/2019/.ipynb_checkpoints/Feature_Engineering_Modelling-checkpoint-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/RNN2.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/RNN2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/Feature Engineering and Feature Selection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/Feature Engineering and Feature Selection.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,23 +51,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="511" />
-          <entry key="py" value="376" />
+          <entry key="py" value="381" />
           <entry key="txt" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="857" />
+          <entry key="Python" value="862" />
           <entry key="Scratch" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -76,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BagOfWords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
+            <state>
               <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -89,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/POS_TAG_Tweet.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -120,21 +122,21 @@
         <option value="$PROJECT_DIR$/BagOfWords.py" />
         <option value="$PROJECT_DIR$/tag_latest.py" />
         <option value="$PROJECT_DIR$/POS_TAG_Tweet.py" />
+        <option value="$PROJECT_DIR$/2019/RNN2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1547" />
-    <option name="y" value="357" />
-    <option name="width" value="1918" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,6 +161,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.POS_TAG_Tweet">
+  <component name="RunManager" selected="Python.RNN2">
     <configuration name="BagOfWords" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PresentAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,6 +212,9 @@
       <module name="PresentAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -217,6 +223,27 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/POS_TAG_Tweet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RNN2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PresentAI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2019/RNN2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -270,14 +297,15 @@
       <item itemvalue="Python.BagOfWords" />
       <item itemvalue="Python.tag_latest" />
       <item itemvalue="Python.POS_TAG_Tweet" />
+      <item itemvalue="Python.RNN2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RNN2" />
         <item itemvalue="Python.POS_TAG_Tweet" />
         <item itemvalue="Python.POS_TAG_Tweet" />
         <item itemvalue="Python.tag_latest" />
         <item itemvalue="Python.BagOfWords" />
-        <item itemvalue="Python.scratch_2" />
       </list>
     </recent_temporary>
   </component>
@@ -312,8 +340,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12328767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -327,7 +354,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -396,9 +423,16 @@
         <state relative-caret-position="-1224" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tag_latest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BagOfWords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state>
           <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -413,17 +447,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tag_latest.py">
+    <entry file="file://$PROJECT_DIR$/2019/RNN2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="340">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/POS_TAG_Tweet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
